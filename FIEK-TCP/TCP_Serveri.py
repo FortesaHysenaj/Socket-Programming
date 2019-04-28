@@ -98,7 +98,7 @@ def clientthread(conn):
         try:
             data = conn.recv(128).decode()
         except socket.error:
-            print("A problem has occurred!")
+            print("Ka ndodhur një problem!")
             break
 
         merr = str(data).rsplit(" ")
