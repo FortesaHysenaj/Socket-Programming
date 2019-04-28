@@ -140,7 +140,7 @@ def clientthread(input, address):
         try:
             data = "Emri i hostit: " + str(socket.gethostbyaddr(host)[0])
         except socket.error:
-            data = "Host's name not found!"
+            data = "Emri i hostit nuk u gjet!"
     elif (merr[0] == "KOHA"):
         data = "Data dhe koha aktuale eshte: " + str(datetime.datetime.now())
     elif (merr[0] == "LOJA"):
@@ -159,7 +159,7 @@ def clientthread(input, address):
         data = "Vlera e konvertuar: " + str(konverto(merr[1], numri))
 
     else:
-        data = "Serveri nuk mund ti pergjigjet kesaj kerkese"
+        data = "Serveri nuk mund ti pergjigjet kesaj kerkese!"
     serverSocket.sendto(data.encode(), address)
 
 
