@@ -34,9 +34,9 @@ def bashketingellore(text):
 def palindrome(s):
     r = s[::-1]
     if s == r:
-        return True
+         return "Eshte Palindrom!"
     else:
-        return False
+        return "Nuk eshte Palindrom!"
 
 def removeDuplicate(text):
     newStr = ""
@@ -117,7 +117,7 @@ def clientthread(conn):
         elif (merr[0] == "BASHKETINGELLORE"):
             data = "Teksti i pranuar përmban " + str(bashketingellore(fjalia)) + " bashketingellore"
         elif (merr[0] == "PALINDROME"):
-            data = "Eshte palindrom: " + str(palindrome(fjalia.replace(" ", "")))
+            data = "Teksti i shenuar: " + str(palindrome(fjalia.replace(" ", "")))
         elif (merr[0] == "DUPLIKIMI"):
             data = "Fjalia: " + str(removeDuplicate(fjalia))
         elif (merr[0] == "PRINTIMI"):
