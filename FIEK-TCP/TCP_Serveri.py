@@ -14,7 +14,7 @@ serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     serverSocket.bind((host, port))
 except socket.error:
-    print("Client can't be reached!")
+    print("Klienti nuk mund të arrihet!")
     sys.exit()
 
 serverSocket.listen(5)
@@ -146,14 +146,14 @@ def clientthread(conn):
             data = "Vlera e konvertuar eshte: " + str(konvertimi(merr[1], numri))
 
         else:
-            data = "The server can't respond to this request!"
+            data = "Serveri nuk mund t'i përgjigjet kësaj kërkese!"
         conn.send(data.encode())
     conn.close()
 
 
 while 1:
     connection, address = serverSocket.accept()
-    print("In server is now connected:" + str(address))
+    print("Në server është tani i lidhur:" + str(address))
     start_new_thread(clientthread, (connection,))
 
 serverSocket.close()
