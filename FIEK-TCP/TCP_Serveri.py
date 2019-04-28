@@ -119,14 +119,14 @@ def clientthread(conn):
         elif (merr[0] == "PALINDROME"):
             data = "Teksti i shenuar: " + str(palindrome(fjalia.replace(" ", "")))
         elif (merr[0] == "DUPLIKIMI"):
-            data = "Fjalia: " + str(removeDuplicate(fjalia))
+            data = "Teksti pa shkronja duplikate eshte: " + str(removeDuplicate(fjalia))
         elif (merr[0] == "PRINTIMI"):
             data = "Print: " + str(printo(fjalia))
         elif (merr[0] == "HOST"):
             try:
                 data = "Emri i hostit: " + str(socket.gethostbyaddr(host)[0])
             except socket.error:
-                data = "Host's name not found!"
+                data = "Emri i hostit nuk u gjet!"
         elif (merr[0] == "KOHA"):
             data = "Data dhe koha aktuale eshte: " + str(datetime.datetime.now())
         elif (merr[0] == "LOJA"):
