@@ -7,7 +7,7 @@ import math
 
 print("----------------------------UDP SERVERI-----------------------")
 host = 'localhost'
-port = 11000
+port = 12000
 
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 try:
