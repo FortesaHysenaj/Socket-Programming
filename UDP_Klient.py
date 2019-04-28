@@ -1,7 +1,7 @@
 import socket
 
 host = 'localhost'
-port = 11000
+port = 12000
 
 print("----------------------------UDP KLIENTI-----------------------")
 socketClient = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
